@@ -25,6 +25,7 @@ This project and everyone participating in it is governed by our [Code of Conduc
 - **Technical Issues**: Encountering bugs with the site itself? Let us know!
 
 When reporting issues, please:
+
 - Use a clear and descriptive title
 - Provide as much relevant information as possible
 - Include screenshots if applicable
@@ -33,6 +34,7 @@ When reporting issues, please:
 ### Suggesting Enhancements
 
 We welcome suggestions for new features or improvements:
+
 - Search existing issues first to avoid duplicates
 - Clearly describe the enhancement and its benefits
 - Explain why this would be useful to the Hytale modding community
@@ -74,22 +76,26 @@ Documentation contributions are the heart of this project:
 1. Fork the repository on GitHub
 
 2. Clone your fork:
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/site.git
 cd site
 ```
 
 3. Add the upstream repository:
+
 ```bash
 git remote add upstream https://github.com/HytaleModding/site.git
 ```
 
 4. Install dependencies:
+
 ```bash
 bun install
 ```
 
 5. Start the development server:
+
 ```bash
 bun run dev
 ```
@@ -166,6 +172,7 @@ Your content here...
 ### Branch Workflow
 
 1. Create a new branch for your changes:
+
 ```bash
 git checkout -b feature/your-feature-name
 # or
@@ -173,12 +180,14 @@ git checkout -b fix/your-bug-fix
 ```
 
 2. Make your changes and commit:
+
 ```bash
 git add .
 git commit -m "Add clear, descriptive commit message"
 ```
 
 3. Push to your fork:
+
 ```bash
 git push origin feature/your-feature-name
 ```
@@ -196,12 +205,14 @@ git push origin feature/your-feature-name
 ### Commit Messages
 
 Follow these conventions:
+
 - Use present tense: "Add feature" not "Added feature"
 - Use imperative mood: "Fix bug" not "Fixes bug"
 - Keep first line under 72 characters
 - Add detailed description if needed
 
 Examples:
+
 ```
 Add server plugin development guide
 
@@ -264,6 +275,7 @@ public class ExamplePlugin {
 ### Recognition
 
 Contributors are recognized in several ways:
+
 - Listed in the repository's contributors
 - Mentioned in release notes for significant contributions
 - Building a portfolio of documentation work
@@ -271,9 +283,9 @@ Contributors are recognized in several ways:
 ## Questions?
 
 If you have questions not covered in this guide:
+
 - Open a GitHub issue with the `question` label
 - Ask in the Discord server
 - Reach out to project maintainers
 
 Thank you for contributing to Hytale Modding Documentation! Your efforts help the entire community learn and grow together.
-

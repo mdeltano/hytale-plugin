@@ -18,9 +18,9 @@ Fixes #(issue)
 
 ## Changes
 
-- 
-- 
-- 
+-
+-
+-
 
 ## Screenshots
 
@@ -37,4 +37,3 @@ If applicable, add before/after screenshots:
 ---
 
 Thank you for contributing!
-

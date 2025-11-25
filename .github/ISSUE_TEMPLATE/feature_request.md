@@ -1,9 +1,9 @@
 ---
 name: Feature Request
 about: Suggest a new feature or enhancement for the documentation site
-title: '[FEATURE] '
+title: "[FEATURE] "
 labels: enhancement
-assignees: ''
+assignees: ""
 ---
 
 ## Feature Type
@@ -27,6 +27,7 @@ A clear and concise description of what the problem is. For example: "I'm always
 **Describe the solution you'd like**
 
 A clear and concise description of what you want to happen. Include:
+
 - What should be added or changed?
 - How would this help users?
 - What would the user experience look like?
@@ -40,6 +41,7 @@ A clear and concise description of any alternative solutions or features you've 
 ## Benefits to the Community
 
 Who would benefit from this feature and how?
+
 - [ ] Beginners learning Hytale modding
 - [ ] Experienced plugin developers
 - [ ] Content creators and modelers
@@ -49,6 +51,7 @@ Who would benefit from this feature and how?
 ## Implementation Ideas
 
 If you have ideas about how this could be implemented:
+
 - Technical approach
 - Required resources
 - Potential challenges
@@ -56,6 +59,7 @@ If you have ideas about how this could be implemented:
 ## Examples
 
 Provide examples of similar features in other documentation sites or projects:
+
 - [Link to example 1]
 - [Link to example 2]
 
@@ -66,7 +70,7 @@ Add any other context, screenshots, or mockups about the feature request here.
 ## Hytale Relevance
 
 How does this relate to Hytale modding specifically?
+
 - Does it address a specific Hytale modding concept?
 - Is it based on official Hytale information?
 - Would it help with server-first development, plugins, data assets, etc.?
-

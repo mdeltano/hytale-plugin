@@ -10,6 +10,7 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 ## Technical Architecture
 
 ### Network & Infrastructure
+
 - **Protocol**: Uses QUIC (reliable UDP with unreliable channels) instead of TCP
 - **Server Compatibility**: Runs on any platform supporting Java 25
 - **Connection Method**: Direct IP initially, server discovery planned post-launch
@@ -18,6 +19,7 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 - **Rendering**: OpenGL 3.3 for Mac compatibility, potential future Vulkan/Metal migration
 
 ### Security & Distribution
+
 - **No Client-Side Code Execution**: Prevents remote code execution exploits
 - **Downloads Limited To**: Configuration files and assets only
 - **Mod Distribution**: Community platforms (CurseForge, Modrinth), no immediate in-game marketplace
@@ -26,6 +28,7 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 ## Modding Capabilities
 
 ### Server-Side Power
+
 - **Full Java Access**: Database connections, web requests, any Java functionality
 - **Custom Libraries**: Can create Lua scripting, ML frameworks, or any Java library
 - **Server Modification**: Shared source code allows heavy server modifications
@@ -33,6 +36,7 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 - **Documentation**: Public GitBook planned, though initially sparse
 
 ### Content Creation (No Code Required)
+
 - **World Generation**: Custom biomes and maps without Java
 - **NPCs & Items**: JSON-based configuration
 - **Crafting Recipes**: Data-driven system
@@ -40,6 +44,7 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 - **Prefab System**: Sophisticated building blocks with in-game editor
 
 ### Advanced Modding
+
 - **Combat System**: Data-driven interaction system for attack chains and abilities
 - **Sub-Hitboxes**: Support for complex boss mechanics (needs improvement)
 - **Status Effects**: Buff/debuff system with custom effects and stats
@@ -49,6 +54,7 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 ## Gameplay Systems
 
 ### Core Mechanics
+
 - **Stamina System**: No hunger by default (can be modded in)
 - **Gravity**: Selective block physics - trees collapse, buildings can float
 - **Lighting**: Major overhaul to fix model/voxel inconsistencies
@@ -56,12 +62,14 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 - **Automation**: No redstone equivalent at launch (moddable)
 
 ### Player Systems
+
 - **Character Models**: Humans by default, changeable in creative mode
 - **Multiplayer Avatars**: Server-controlled (no custom models in multiplayer)
 - **Skins**: Full customization possible ("mod yourself into a potato")
 - **Shapeshifting**: Transformation potions exist for fun/modding
 
 ### World & NPCs
+
 - **Faction System**: Living world with dynamic NPC interactions
 - **Village Systems**: Planned dynamic villages with relationships and behaviors
 - **Chunk Loading**: Entities unload when out of all players' render distance
@@ -70,24 +78,28 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 ## Development Philosophy
 
 ### Release Strategy
+
 - **Base Game Priority**: Adventure mode is primary focus, modding architecture supports it
 - **Tech Debt**: Acknowledged as necessary for release, commitment to improvement
 - **Update Frequency**: Very frequent updates planned, especially post-launch
 - **Version Policy**: Always latest version, but servers can run modified versions
 
 ### Community Focus
+
 - **Creator Support**: Development bounties planned for community contributors
 - **Tutorials**: Official modding tutorials planned with partners
 - **Feedback Integration**: Strong commitment to community-driven improvements
 - **Accessibility**: Designed for lower-end hardware, reasonable system requirements
 
 ### Tools & Documentation
+
 - **Blockbench Integration**: Replaces custom "Hytale Model Maker"
 - **Machinima Tools**: Full cinematic creation capabilities
 - **Creative Tools**: Major reveal planned for building/creation features
 - **Source Access**: Server code will be unobfuscated with developer comments
 
 ## Platform Support
+
 - **Current**: Windows (primary)
 - **Planned**: Mac/Linux support actively in development
 - **VR**: Not feasible in near future
@@ -95,12 +107,14 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 - **Offline Play**: Single-player works without internet connection
 
 ## Monetization & Legal
+
 - **No Pay-to-Win**: Firm commitment against P2W mechanics
 - **Cosmetics Only**: Low-price cosmetic packs to support infrastructure
 - **Server EULA**: Terms being finalized for server monetization policies
 - **QUIC Blocking**: Acknowledged issue in some regions, no alternative protocol
 
 ## Current Limitations
+
 - **Custom Shaders**: Not supported until sandboxing solution found
 - **UI/Input Limitations**: Being expanded but currently restricted
 - **Documentation**: Sparse initially, will improve over time

@@ -37,7 +37,7 @@ Alternatively, visit [bun.sh](https://bun.sh/) for other installation methods.
 ### Installation
 
 1. Create a fork of the repository
-2. Clone that repository & change your directory into it. 
+2. Clone that repository & change your directory into it.
 
 ```bash
 git clone https://github.com/<you>/<fork repo name>.git
@@ -70,22 +70,22 @@ bun run dev
 
 ### Routes
 
-| Route | Description |
-| --- | --- |
-| `/` | Landing page with community links and introduction |
-| `/docs` | Main documentation hub |
-| `/docs/quick-start` | Getting started guide for Hytale modding |
-| `/docs/what-we-know-so-far` | Current knowledge base about Hytale modding |
-| `/docs/what-we-know-so-far/faq` | Frequently asked questions |
-| `/docs/what-we-know-so-far/developer-qa-insights` | Technical insights from Hytale developers Zero and Slikey |
-| `/docs/what-we-know-so-far/inputs` | Input handling documentation |
-| `/docs/what-we-know-so-far/server-first-dev` | Server-first development approach |
-| `/docs/what-we-know-so-far/ui-customization` | UI customization guides |
-| `/docs/what-we-know-so-far/ways-to-develop/data-assets` | Working with data assets (JSON) |
-| `/docs/what-we-know-so-far/ways-to-develop/modelling` | 3D modelling and Blockbench |
-| `/docs/what-we-know-so-far/ways-to-develop/plugin` | Java plugin development |
-| `/docs/what-we-know-so-far/ways-to-develop/visual-scripting` | Visual scripting workflows |
-| `/api/search` | Documentation search API endpoint |
+| Route                                                        | Description                                               |
+| ------------------------------------------------------------ | --------------------------------------------------------- |
+| `/`                                                          | Landing page with community links and introduction        |
+| `/docs`                                                      | Main documentation hub                                    |
+| `/docs/quick-start`                                          | Getting started guide for Hytale modding                  |
+| `/docs/what-we-know-so-far`                                  | Current knowledge base about Hytale modding               |
+| `/docs/what-we-know-so-far/faq`                              | Frequently asked questions                                |
+| `/docs/what-we-know-so-far/developer-qa-insights`            | Technical insights from Hytale developers Zero and Slikey |
+| `/docs/what-we-know-so-far/inputs`                           | Input handling documentation                              |
+| `/docs/what-we-know-so-far/server-first-dev`                 | Server-first development approach                         |
+| `/docs/what-we-know-so-far/ui-customization`                 | UI customization guides                                   |
+| `/docs/what-we-know-so-far/ways-to-develop/data-assets`      | Working with data assets (JSON)                           |
+| `/docs/what-we-know-so-far/ways-to-develop/modelling`        | 3D modelling and Blockbench                               |
+| `/docs/what-we-know-so-far/ways-to-develop/plugin`           | Java plugin development                                   |
+| `/docs/what-we-know-so-far/ways-to-develop/visual-scripting` | Visual scripting workflows                                |
+| `/api/search`                                                | Documentation search API endpoint                         |
 
 ### Project Structure
 
