@@ -1,9 +1,9 @@
 ---
 name: Question
 about: Ask a question about the documentation or Hytale modding
-title: '[QUESTION] '
+title: "[QUESTION] "
 labels: question
-assignees: ''
+assignees: ""
 ---
 
 ## Question
@@ -49,4 +49,3 @@ What aspect of Hytale modding does your question relate to?
 ## Additional Information
 
 Add any other relevant information, code snippets, or screenshots here.
-

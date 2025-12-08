@@ -276,4 +276,3 @@ If you have questions not covered in this guide:
 - Reach out to project maintainers
 
 Thank you for contributing to Hytale Modding Documentation! Your efforts help the entire community learn and grow together.
-

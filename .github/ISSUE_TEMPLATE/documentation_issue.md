@@ -1,9 +1,9 @@
 ---
 name: Documentation Issue
 about: Report errors, unclear content, or missing information in the documentation
-title: '[DOCS] '
+title: "[DOCS] "
 labels: documentation
-assignees: ''
+assignees: ""
 ---
 
 ## Documentation Issue Type
@@ -51,4 +51,3 @@ Suggested content here...
 ## Related Issues
 
 Link any related issues or pull requests here.
-

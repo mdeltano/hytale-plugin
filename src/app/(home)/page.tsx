@@ -16,7 +16,6 @@ export default function HomePage() {
 
   return (
     <div className="font-grotesk flex flex-col justify-center items-center min-h-[calc(100vh-4rem)] px-4 relative overflow-hidden">
-      {/* Branch and Commit Info - Bottom Right */}
       <a 
         href="https://github.com/HytaleModding/site" 
         target="_blank" 
@@ -106,11 +105,6 @@ export default function HomePage() {
               <span className="text-base md:text-lg">Discord</span>
             </a>
           </div>
-      </div>
-      
-      {/* Copyright Footer */}
-      <div className="absolute bottom-4 left-4 z-10 text-xs text-slate-900 dark:text-slate-900">
-        © {new Date().getFullYear()} Hytale Modding
       </div>
     </div>
   );

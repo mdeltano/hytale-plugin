@@ -1,9 +1,9 @@
 ---
 name: Feature Request
 about: Suggest a new feature or enhancement for the documentation site
-title: '[FEATURE] '
+title: "[FEATURE] "
 labels: enhancement
-assignees: ''
+assignees: ""
 ---
 
 ## Feature Type
@@ -66,7 +66,7 @@ Add any other context, screenshots, or mockups about the feature request here.
 ## Hytale Relevance
 
 How does this relate to Hytale modding specifically?
+
 - Does it address a specific Hytale modding concept?
 - Is it based on official Hytale information?
 - Would it help with server-first development, plugins, data assets, etc.?
-

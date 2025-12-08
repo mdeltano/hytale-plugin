@@ -4,10 +4,10 @@
 
 As this is a documentation website, we continuously update and maintain the current version. Security updates are applied to the main branch as soon as they are identified and resolved.
 
-| Version | Supported          |
-| ------- | ------------------ |
+| Version              | Supported          |
+| -------------------- | ------------------ |
 | Latest (main branch) | :white_check_mark: |
-| Older commits | :x: |
+| Older commits        | :x:                |
 
 ## Reporting a Vulnerability
 
@@ -145,4 +145,3 @@ We appreciate the security research community and will acknowledge all valid sec
 - We may feature your contribution in release notes
 
 Thank you for helping keep the Hytale Modding Documentation site secure!
-

@@ -1,9 +1,9 @@
 ---
 name: Bug Report
 about: Report a bug or issue with the documentation site
-title: '[BUG] '
+title: "[BUG] "
 labels: bug
-assignees: ''
+assignees: ""
 ---
 
 ## Bug Description
@@ -46,4 +46,3 @@ Add any other context about the problem here. This might include:
 ## Possible Solution
 
 If you have suggestions on how to fix the bug, please share them here.
-

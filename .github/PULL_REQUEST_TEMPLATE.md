@@ -18,9 +18,9 @@ Fixes #(issue)
 
 ## Changes
 
-- 
-- 
-- 
+-
+-
+-
 
 ## Screenshots
 
@@ -32,9 +32,8 @@ If applicable, add before/after screenshots:
 - [ ] Ran `bun audit` (no critical vulnerabilities)
 - [ ] Checked spelling and grammar
 - [ ] Verified all links work
-- [ ] Followed [Contributing Guidelines](https://github.com/HytaleModding/site/blob/main/CONTRIBUTING.md)
+- [ ] Followed [Contributing Guidelines](../CONTRIBUTING.md)
 
 ---
 
 Thank you for contributing!
-

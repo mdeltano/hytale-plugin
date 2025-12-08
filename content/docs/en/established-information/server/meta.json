@@ -1,0 +1,5 @@
+{
+  "title": "Server",
+  "pages": ["server-first-dev.mdx", "..."],
+  "icon": "Server"
+}

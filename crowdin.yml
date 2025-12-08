@@ -1,0 +1,10 @@
+project_id: "851150"
+api_token_env: CROWDIN_PERSONAL_TOKEN
+preserve_hierarchy: true
+
+files:
+  - source: "content/docs/en/**/*.mdx"
+    translation: "content/docs/%locale%/**/%original_file_name%"
+
+  - source: "messages/en.json"
+    translation: "messages/%locale%.json"
