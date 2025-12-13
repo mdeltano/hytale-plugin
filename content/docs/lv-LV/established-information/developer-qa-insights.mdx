@@ -1,124 +1,124 @@
 ---
-title: Developer Q&A Technical Insights
-description: Comprehensive summary of technical insights from Hytale developers covering architecture, modding, gameplay systems, and development philosophy.
+title: Izstrādātāju Q&A Tehniskie Ieskati
+description: Visaptverošs Hytale izstrādātāju tehnisko ieskatu kopsavilkums par arhitektūru, modifikācijām, spēles sistēmām un izstrādes filozofiju.
 ---
 
-# Developer Q&A Technical Insights
+# Izstrādātāju Q&A Tehniskie Ieskati
 
-This extensive Q&A session with Hytale developers reveals critical technical details about the game's architecture, modding philosophy, gameplay systems, and development approach.
+Šī visaptverošā jautājumu un atbilžu sesija ar Hytale izstrādātājiem atklāj kritiskas tehniskās detaļas par spēles arhitektūru, modifikācijām, sistēmām un izstrādes pieeju.
 
-## Technical Architecture
+## Tehniskā Arhitektūra
 
-### Network & Infrastructure
+### Tīkls un Infrastruktūra
 
-* **Protocol**: Uses QUIC (reliable UDP with unreliable channels) instead of TCP
-* **Server Compatibility**: Runs on any platform supporting Java 25
-* **Connection Method**: Direct IP initially, server discovery planned post-launch
-* **Data Layer**: Current custom serialization format will be replaced post-launch
-* **Performance**: Multi-core support - each world has main thread + parallel execution
-* **Rendering**: OpenGL 3.3 for Mac compatibility, potential future Vulkan/Metal migration
+* **Protokols**: Izmanto QUIC (uzticams UDP ar neuzticamiem kanāliem) TCP vietā
+* **Servera saderība**: Darbojas uz jebkuras platformas, kas atbalsta Java 25
+* **Savienojuma Metode**: Tiešais IP sākumā, serveru meklētājs plānots pēc palaišanas
+* **Datu Slānis**: Pašreizējais pielāgotais serializācijas formāts tiks aizstāts pēc palaišanas
+* **Veiktspēja**: Daudzkodolu atbalsts - katrai pasaulei ir galvenais pavediens + paralēlā izpilde
+* **Renderēšana**: OpenGL 3.3 Mac saderībai, potenciāli migrācija uz Vulkan/Metal nākotnē
 
-### Security & Distribution
+### Drošībā un Distribūcija
 
-* **No Client-Side Code Execution**: Prevents remote code execution exploits
-* **Downloads Limited To**: Configuration files and assets only
-* **Mod Distribution**: Community platforms (CurseForge, Modrinth), no immediate in-game marketplace
-* **Server Hosting**: Available day 1, no business agreements required (just EULA/TOS)
+* \*\*Nav Klienta Puses Koda Palaišanas: Nepieļauj attalināta koda palaišanas ekspluatācijas
+* **Lejuplādes Limitētas Tikai**: Konfigurācijas failiem un līdzekļiem
+* **Mod Izplatīšana** Kopienas platformas (CurseForge, Modrinth), nav tūlītēja spēles tirgus
+* **Servera Hostings**: Pieejams no pirmās dienas, nav nepieciešams biznesa līgums (tikai EULA/TOS)
 
-## Modding Capabilities
+## Modificēšanas Iespējas
 
-### Server-Side Power
+### Servera-Puses Jauda
 
-* **Full Java Access**: Database connections, web requests, any Java functionality
-* **Custom Libraries**: Can create Lua scripting, ML frameworks, or any Java library
-* **Server Modification**: Shared source code allows heavy server modifications
-* **Hot Reload**: Supported for most asset types
-* **Documentation**: Public GitBook planned, though initially sparse
+* **Pilna Java Piekļuve**: Datubāzes savienojumi, web pieprasījumi, jebkāda Java funkcionalitāte
+* **Pielāgotas Bibliotēkas**: Var izveidot Lua skriptus, ML struktūrdarbības vai jebkuru Java bibliotēku
+* **Servera Modifikācijas**: Koplietots avota kods ļauj smagai servera modifikācijai
+* **Karstā pārlāde**: Atbalstīta lielākajai daļai līdzekļu tipiem
+* **Dokumentācija** Publisks GitBlook ieplānots, lai gan sākumā nepilns
 
-### Content Creation (No Code Required)
+### Satura Radīšana (Kodēšana nav nepieciešama)
 
-* **World Generation**: Custom biomes and maps without Java
-* **NPCs & Items**: JSON-based configuration
-* **Crafting Recipes**: Data-driven system
-* **Visual Scripting**: Replaces command blocks, fully sandboxed
-* **Prefab System**: Sophisticated building blocks with in-game editor
+* **Pasaules Ģenerēšana**: Pielāgotas biomas un kartes bez Javas
+* **NPC un Priekšmeti**: JSON-bāzēta konfigurācija
+* **Krafting Receptes**: Datu-vadīta sistēma
+* **Vizuālais Skripts**: Aizvieto komandu blokus, pilnībā nodalītā vidē
+* **Salikumu Sistēma**: Izsmalcināti būvēšanas bloki rediģējami spēlē
 
-### Advanced Modding
+### Advancēta Modificēšana
 
-* **Combat System**: Data-driven interaction system for attack chains and abilities
-* **Sub-Hitboxes**: Support for complex boss mechanics (needs improvement)
-* **Status Effects**: Buff/debuff system with custom effects and stats
-* **Custom UI**: NoesisGUI transition enables powerful interface customization
-* **Block Physics**: Selective system (trees fall, but placed blocks don't)
+* **Cīņas Sistēma**: Datu-vadīta mijiedarbības sistēma priekš uzbrukuma ķēdēm un spējām
+* **Iekš-Trāpījuma kastes**: Atbalsts sarežģītai bosu mehānikai (nepieciešami uzlabojumi)
+* **Statusa Efekti**: Pastiprināšanas/Vājināšanas sistēmas ar pielāgotiem efektiem un statusiem
+* **Pielāgots LI**: Pāreja uz NoesisGUI nodrošina spēcīgu interfeisa pielāgošanu
+* **Bloku Fizika**: Selektīva sistēma (koki krīt, bet novietoti bloki nekrīt)
 
-## Gameplay Systems
+## Spēles Sistēmas
 
-### Core Mechanics
+### Kodola Mehānismi
 
-* **Stamina System**: No hunger by default (can be modded in)
-* **Gravity**: Selective block physics - trees collapse, buildings can float
-* **Lighting**: Major overhaul to fix model/voxel inconsistencies
-* **World Height**: Currently limited, may change with voxel storage updates
-* **Automation**: No redstone equivalent at launch (moddable)
+* **Fiziskās piepūles Sistēma**: Nav vajadzības ēst pēc noklusējuma (var būt iemodificēts)
+* **Gravitācija**: Selektīva bloku fizika - koki sabrūk, ēkas paliek gaisā
+* **Gaisma**: Kapitālas izmaiņas, lai labotu modeļu/vokseļu neatbilstības
+* **Pasaules Augstums**: Pašlaik ierobežots, var mainīties līdz ar vokseļu krātuves atjauninājumiem
+* **Automatizācija**: Bez redstone ekvivalenta spēles palaišanas brīdī (modificējams)
 
-### Player Systems
+### Spēlētāju Sistēmas
 
-* **Character Models**: Humans by default, changeable in creative mode
-* **Multiplayer Avatars**: Server-controlled (no custom models in multiplayer)
-* **Skins**: Full customization possible ("mod yourself into a potato")
-* **Shapeshifting**: Transformation potions exist for fun/modding
+* **Tēla Modelis**: Cilvēks pēc noklusējuma, maināms radošajā režīmā
+* **Daudzspēlētāju Avatari**: Servera kontrolēti (nav pielāgotu modeļu daudzspēlētāju režīmā)
+* **Ādas**: Pilnībā pielāgojamas ("pārmodificē sevi par kartupeli")
+* **Formas pārveidošanās**: Pārveidošanās dziras eksistē prieka pēc vai modificēšanai
 
-### World & NPCs
+### Pasaule un NPC
 
-* **Faction System**: Living world with dynamic NPC interactions
-* **Village Systems**: Planned dynamic villages with relationships and behaviors
-* **Chunk Loading**: Entities unload when out of all players' render distance
-* **Seeds**: Shareable world generation seeds supported
+* **Frakciju Sistēma**: Dzīva pasaule ar dinamiskām NPC mijiedarbībām
+* **Ciematu Sistēmas**: Plānoti dinamiski ciemati ar attiecībām un uzvedību
+* **Gabalu Ielāde**: Vienības tiek izlādētās, kad nav visu spēlētāju renderēšanas attālumā
+* **Sēklas**: Tiek atbalstīta pasaules ģenerēšanas sēklu koplietošana
 
-## Development Philosophy
+## Izstrādes Filozofija
 
-### Release Strategy
+### Palaišanas Stratēģija
 
-* **Base Game Priority**: Adventure mode is primary focus, modding architecture supports it
-* **Tech Debt**: Acknowledged as necessary for release, commitment to improvement
-* **Update Frequency**: Very frequent updates planned, especially post-launch
-* **Version Policy**: Always latest version, but servers can run modified versions
+* **Spēles Bāzes Prioritāte**: Piedzīvojumu režīms ir primārais fokuss un modificēšanas arhitektūra to atbalsta
+* **Tehniskais Parāds**: Atzīts par nepieciešamu līdz izlaišanai, apņemts to labot
+* **Atjauninājumu Frekvence**: Plānoti ļoti regulāri atjauninājumi, īpaši pēc palaišanas
+* **Versiju Polise**: Vienmēr jaunākā versija, bet serveri var palaist modificētas versijas
 
-### Community Focus
+### Kopienas Fokuss
 
-* **Creator Support**: Development bounties planned for community contributors
-* **Tutorials**: Official modding tutorials planned with partners
-* **Feedback Integration**: Strong commitment to community-driven improvements
-* **Accessibility**: Designed for lower-end hardware, reasonable system requirements
+* **Veidotāju Atbalsts**: Kopienas līdzstrādniekiem plānotas izstrādes balvas
+* **Pamācības**: Oficiālas modificēšanas pamācības plānotas ar partneriem
+* **Atsauces Integrācija**: Stingra apņemšanās veikt kopienas virzītus uzlabojumus
+* **Pieejamība**: Paredzēts vājākai aparatūrai, saprātīgām sistēmas prasībām
 
-### Tools & Documentation
+### Rīki un Dokumentācija
 
-* **Blockbench Integration**: Replaces custom "Hytale Model Maker"
-* **Machinima Tools**: Full cinematic creation capabilities
-* **Creative Tools**: Major reveal planned for building/creation features
-* **Source Access**: Server code will be unobfuscated with developer comments
+* **Blockbench Integrācija**: Aizvieto pielāgoto "Hytale Model Maker"
+* **Machinima Rīki**: Pilnas kino radīšanas iespējas
+* **Radošie Rīki**: Plānota liela atklāšana būvēšanas/radīšanas funkcijām
+* **Avota Pieeja**: Servera kods netiks aizsegts un saturēs izstrādātāju komentārus
 
-## Platform Support
+## Platformu Atbalsts
 
-* **Current**: Windows (primary)
-* **Planned**: Mac/Linux support actively in development
-* **VR**: Not feasible in near future
-* **Performance**: Uncapped framerate, designed for accessibility
-* **Offline Play**: Single-player works without internet connection
+* **Pašlaik**: Windows (primāri)
+* **Plānots**: Mac/Linux atbalsts aktīvi tiek izstrādāts
+* **VR**: Tuvākajā nākotnē nav iespējams
+* **Veiktspēja**: Neierobežots kadru ātrums, kas paredzēts pieejamībai
+* **Bezsaistes Spēlēšana**: Vienspēlētāja režīms darbosies bez interneta savienojuma
 
-## Monetization & Legal
+## Monetizācija un Juridiskā informācija
 
-* **No Pay-to-Win**: Firm commitment against P2W mechanics
-* **Cosmetics Only**: Low-price cosmetic packs to support infrastructure
-* **Server EULA**: Terms being finalized for server monetization policies
-* **QUIC Blocking**: Acknowledged issue in some regions, no alternative protocol
+* **Nav Pay-to-Win**: Cieša apņemšanās pret P2W mehānismiem
+* **Tikai Kosmētiskas lietas**: Zemu cenu kosmētikas pakas, lai atbalstītu infrastruktūru
+* **Servera GLLL**: Gala lietotāja licenzes līguma nosacījumi tiek finalizēti serveru monetizācijai
+* **QUIC Bloķēšana**: Dažiem reģioniem atzīta problēma, nav alternatīva protokola
 
-## Current Limitations
+## Patreizējās Limitācijas
 
-* **Custom Shaders**: Not supported until sandboxing solution found
-* **UI/Input Limitations**: Being expanded but currently restricted
-* **Documentation**: Sparse initially, will improve over time
-* **Client Mods**: No client-side code execution for security
-* **Nameplates**: Currently limited customization
+* **Pielāgoti Shader**: Nav atbalstīti līdz nodalītas vides risinājumi atrasti
+* **LI/Ievades Limitācijas**: Tiek paplašināts, bet patlaik aprobežots
+* **Dokumentācija**: Sākuma nepapildināta, bet ar laiku uzlabosies
+* **Klienta Modi**: Drošībai nepieļauj koda palaišanu klienta pusē
+* **Vārda plates**: Patlaik ierobežota pielāgošana
 
-This comprehensive technical foundation positions Hytale as a secure, extensible platform that empowers creators while maintaining performance, accessibility, and a commitment to continuous improvement.
+Šis visaptverošais tehniskais pamats pozicionē Hytale kā drošu, paplašināmu platformu, kas pastiprina satura veidotājus, vienlaikus saglabājot veiktspēju, pieejamību un apņemšanos uzlaboties nepārtraukti.

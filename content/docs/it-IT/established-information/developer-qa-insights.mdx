@@ -7,18 +7,18 @@ description: Comprehensive summary of technical insights from Hytale developers 
 
 This extensive Q&A session with Hytale developers reveals critical technical details about the game's architecture, modding philosophy, gameplay systems, and development approach.
 
-## Technical Architecture
+## Architettura Tecnica
 
-### Network & Infrastructure
+### Rete e Infrastruttura
 
 * **Protocol**: Uses QUIC (reliable UDP with unreliable channels) instead of TCP
 * **Server Compatibility**: Runs on any platform supporting Java 25
 * **Connection Method**: Direct IP initially, server discovery planned post-launch
 * **Data Layer**: Current custom serialization format will be replaced post-launch
-* **Performance**: Multi-core support - each world has main thread + parallel execution
+* **Prestazioni**: Supporto multi-core - ogni mondo ha un thread principale + esecuzione parallela
 * **Rendering**: OpenGL 3.3 for Mac compatibility, potential future Vulkan/Metal migration
 
-### Security & Distribution
+### Sicurezza e Distribuzione
 
 * **No Client-Side Code Execution**: Prevents remote code execution exploits
 * **Downloads Limited To**: Configuration files and assets only
@@ -27,23 +27,23 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 
 ## Modding Capabilities
 
-### Server-Side Power
+### Potenza Lato Server
 
-* **Full Java Access**: Database connections, web requests, any Java functionality
+* **Accesso completo a Java**: connessioni a database, richieste web, qualsiasi funzionalità Java
 * **Custom Libraries**: Can create Lua scripting, ML frameworks, or any Java library
 * **Server Modification**: Shared source code allows heavy server modifications
 * **Hot Reload**: Supported for most asset types
-* **Documentation**: Public GitBook planned, though initially sparse
+* **Documentazione**: GitBook pubblico pianificato, anche se inizialmente sparso
 
-### Content Creation (No Code Required)
+### Creazione Di Contenuti (Nessun Codice Richiesto)
 
-* **World Generation**: Custom biomes and maps without Java
-* **NPCs & Items**: JSON-based configuration
+* **Generazione dei mondi**: Biomi e mappe personalizzati senza Java
+* **NPCs e Items**: configurazione basata su JSON
 * **Crafting Recipes**: Data-driven system
 * **Visual Scripting**: Replaces command blocks, fully sandboxed
 * **Prefab System**: Sophisticated building blocks with in-game editor
 
-### Advanced Modding
+### Modding Avanzato
 
 * **Combat System**: Data-driven interaction system for attack chains and abilities
 * **Sub-Hitboxes**: Support for complex boss mechanics (needs improvement)
@@ -51,12 +51,12 @@ This extensive Q&A session with Hytale developers reveals critical technical det
 * **Custom UI**: NoesisGUI transition enables powerful interface customization
 * **Block Physics**: Selective system (trees fall, but placed blocks don't)
 
-## Gameplay Systems
+## Sistemi Di Gioco
 
-### Core Mechanics
+### Meccaniche Principali
 
 * **Stamina System**: No hunger by default (can be modded in)
-* **Gravity**: Selective block physics - trees collapse, buildings can float
+* **Gravità**: Fisica dei blocchi selettiva - gli alberi crollano, gli edifici possono fluttuare
 * **Lighting**: Major overhaul to fix model/voxel inconsistencies
 * **World Height**: Currently limited, may change with voxel storage updates
 * **Automation**: No redstone equivalent at launch (moddable)

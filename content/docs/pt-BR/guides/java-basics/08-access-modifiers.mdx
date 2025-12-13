@@ -111,7 +111,7 @@ public class Jogador {
 }
 ```
 
-Now you can safely interact with the object:
+Agora você pode interagir com segurança com o objeto:
 
 ```java
 Jogador jogador = new Jogador("Alice", 100);
@@ -123,12 +123,12 @@ jogador.definirVida(-20);  // Definido automaticamente para 0
 System.out.println(jogador.definirVida());  // 0
 ```
 
-<Callout type="info" title="Getter and Setter Naming">
-  Follow Java naming conventions:
+<Callout type="info" title="Nomeação de Getter e Setter">
+  Seguir convenções de nomenclatura do Java:
 
-  * **Getter**: `get` + property name (capitalized)
-  * **Setter**: `set` + property name (capitalized)
-  * **Boolean**: `is` + property name (capitalized)
+  * **Getter**: `obter` + nome da propriedade (capitalizado)
+  * **Setter**: `definir` + nome da propriedade (capitalizado)
+  * **Boolean**: `eh ou esta` + nome da propriedade (capitalizado)
 
   ```java
   private int Vida;
@@ -285,194 +285,196 @@ public class Ferramenta {
 ### Exemplo de Conta Bancária
 
 ```java
-public class PlayerWallet {
-    private int gold;
-    private int silver;
-    
-    public PlayerWallet() {
-        this.gold = 0;
-        this.silver = 0;
+public class CarteiraDoJogador {
+    private int ouro;
+    private int prata;
+
+    public CarteiraDoJogador() {
+        this.ouro = 0;
+        this.prata = 0;
     }
-    
-    public void addGold(int amount) {
-        if (amount > 0) {
-            gold += amount;
-            System.out.println("Added " + amount + " gold");
+
+    public void adicionarOuro(int quantidade) {
+        if (quantidade > 0) {
+            ouro += quantidade;
+            System.out.println("Adicionado " + quantidade + " de ouro");
         }
     }
-    
-    public boolean spendGold(int amount) {
-        if (amount > gold) {
-            System.out.println("Not enough gold!");
+
+    public boolean gastarOuro(int quantidade) {
+        if (quantidade > ouro) {
+            System.out.println("Ouro insuficiente!");
             return false;
         }
         
-        gold -= amount;
-        System.out.println("Spent " + amount + " gold");
+        ouro -= quantidade;
+        System.out.println("Gasto " + quantidade + " de ouro");
         return true;
     }
-    
-    public int getGold() {
-        return gold;
+
+    public int obterOuro() {
+        return ouro;
     }
-    
-    public int getTotalValue() {
-        // 1 gold = 100 silver
-        return gold * 100 + silver;
+
+    public int obterValorTotal() {
+        // 1 ouro = 100 pratas
+        return ouro * 100 + prata;
     }
 }
 ```
 
-### Protected Block System
+### Sistema de Blocos Protegido
 
 ```java
-public class ProtectedBlock {
+public class BlocoProtegido {
     private int x, y, z;
-    private String type;
-    private String owner;
-    private boolean locked;
-    
-    public ProtectedBlock(int x, int y, int z, String type, String owner) {
+    private String tipo;
+    private String dono;
+    private boolean estaTrancado;
+
+    public BlocoProtegido(int x, int y, int z, String tipo, String dono) {
         this.x = x;
         this.y = y;
         this.z = z;
-        this.type = type;
-        this.owner = owner;
-        this.locked = true;
+        this.tipo = tipo;
+        this.dono = dono;
+        this.estaTrancado = true; // Começa trancado por padrão
     }
-    
-    public boolean canBreak(String playerName) {
-        if (!locked) {
+
+    public boolean podeQuebrar(String nomeJogador) {
+        // Se não estiver trancado, qualquer um pode quebrar
+        if (!estaTrancado) {
             return true;
         }
         
-        return playerName.equals(owner);
+        // Se estiver trancado, só o dono pode quebrar
+        return nomeJogador.equals(dono);
     }
-    
-    public void unlock(String playerName) {
-        if (playerName.equals(owner)) {
-            locked = false;
-            System.out.println("Block unlocked");
+
+    public void destrancar(String nomeJogador) {
+        if (nomeJogador.equals(dono)) {
+            trancado = false;
+            System.out.println("Bloco destrancado");
         } else {
-            System.out.println("You don't own this block!");
+            System.out.println("Você não é o dono deste bloco!");
         }
     }
-    
-    // Getters only - position and owner shouldn't change
-    public int getX() {
+
+    // Getters apenas - posição e dono não devem mudar
+    public int obterX() {
         return x;
     }
-    
-    public int getY() {
+
+    public int obterY() {
         return y;
     }
-    
-    public int getZ() {
+
+    public int obterZ() {
         return z;
     }
-    
-    public String getOwner() {
-        return owner;
+
+    public String obterDono() {
+        return dono;
     }
-    
-    public boolean isLocked() {
-        return locked;
+
+    public boolean estaTrancado() {
+        return trancado;
     }
 }
 ```
 
-## When to Use Private vs Public
+## Quando Usar Private vs Public
 
-<Callout type="info" title="General Rules">
-  **Make it private by default!** Only make things public if they need to be accessed from outside.
+<Callout type="info" title="Regras Gerais">
+  **Torná-lo privado por padrão!** Apenas torne as coisas públicas se elas precisarem ser acessadas de fora.
 
   **Private:**
 
-  * Internal data (health, position, inventory)
-  * Helper methods used only within the class
-  * Anything that needs validation
+  * Dados internos (vida, posição, inventário)
+  * Métodos de ajuda usados apenas na classe
+  * Tudo que precise de validação
 
   **Public:**
 
-  * Methods that define the class's behavior
-  * Constructor
-  * Methods other classes need to call
+  * Métodos que definem o comportamento da classe
+  * Construtor
+  * Métodos que outras classes precisam utilizar
 
   ```java
-  public class Example {
-      // Private - internal data
-      private int internalCounter;
-      private String secretKey;
-      
-      // Public - part of the interface
-      public void doSomething() {
-          // Uses private helper method
-          validateData();
+  public class Exemplo {
+      // Privado - dados internos (ninguém de fora vê)
+      private int contadorInterno;
+      private String chaveSecreta;
+
+      // Público - parte da interface (o que o mundo exterior pode usar)
+      public void fazerAlgo() {
+          // Usa um método auxiliar privado
+          validarDados();
       }
-      
-      // Private - internal helper
-      private void validateData() {
-          // ...
+
+      // Privado - auxiliar interno (só esta classe pode usar)
+      private void validarDados() {
+          // ... (lógica de validação)
       }
   }
   ```
 </Callout>
 
-## The `final` Keyword
+## A palavra-chave `final`
 
-`final` means a variable can't be changed after it's set:
+`final` significa que uma variável não pode ser alterada após ser definida:
 
 ```java
-public class Player {
-    private final String id;  // Can't change after creation
-    private String name;      // Can change
-    private int health;       // Can change
-    
-    public Player(String id, String name) {
+public class Jogador {
+    private final String id;  // Não pode mudar após a criação (Imutável)
+    private String nome;      // Pode mudar
+    private int vida;         // Pode mudar
+
+    public Jogador(String id, String nome) {
         this.id = id;
-        this.name = name;
+        this.nome = nome;
     }
-    
-    public String getId() {
+
+    public String obterId() {
         return id;
     }
-    
-    // No setId() - it's final!
-    
-    public String getName() {
-        return name;
+
+    // Não existe definirId() - porque a variável é final!
+
+    public String obterNome() {
+        return nome;
     }
-    
-    public void setName(String name) {
-        this.name = name;
+
+    public void definitNome(String nome) {
+        this.nome = nome;
     }
 }
 ```
 
-## Practice Exercises
+## Exercícios de prática
 
-1. **Create a `BankAccount` Class**:
-   * Private properties: accountNumber, balance
-   * Constructor to set account number
-   * Methods: deposit(), withdraw(), getBalance()
-   * Validation: can't withdraw more than balance
-   * Account number should be read-only
+1. **Crie uma Classe `ContaDoBanco`**:
+   * Propriedades Privadas: numeroDaConta, saldo
+   * Construtor para definir o número da conta
+   * Métodos: depositar(), sacar(), obterSaldo()
+   * Validação: não é possível sacar mais do que o saldo
+   * Número de conta deve ser read-only (somente leitura)
 
-2. **Create a `Door` Class**:
-   * Private properties: isLocked, keyCode
-   * Constructor to set the key code
-   * Methods: lock(), unlock(String code), isLocked()
-   * unlock() only works with correct code
-   * Code should be private (don't expose it!)
+2. **Crie uma classe `Porta`**:
+   * Propriedades Privadas: estaTrancada, codigoDeDesbloqueio
+   * Construtor para definir o código de desbloqueio
+   * Métodos: trancar(), destrancar(String codigo), estaTrancada()
+   * desbloquear() só funciona com código correto
+   * O código deve ser Private (não exponha!)
 
-3. **Create a `PlayerStats` Class**:
-   * Private properties: strength, defense, speed
-   * Constructor to set all stats
-   * Getters for all stats
-   * Method: getPowerLevel() that returns strength + defense + speed
-   * Stats can't be negative or over 100
+3. **Criar uma Classe `EstatisticasDoPlayer`**:
+   * Propriedades Privadas: forca, defesa, velocidade
+   * Construtor para definir todas as estatísticas
+   * Getters para todas as estatísticas
+   * Método: obterNivelDePoder() que retorna forca + defesa + velocidade
+   * As estatísticas não podem ser negativas ou superiores a 100
 
-4. **Refactor a Class**: Take one of your classes from the previous lesson and add proper encapsulation:
-   * Make all properties private
-   * Add appropriate getters and setters
-   * Add validation where needed
+4. **Refatore uma Classe**: Pegue uma de suas classes da lição anterior e adicione o encapsulamento adequado:
+   * Prive todas as propriedades
+   * Adicionar getters e setters apropriados
+   * Adicione a validação aonde necessário

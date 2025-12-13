@@ -1,35 +1,30 @@
 ---
-title: Java Modding (Server Plugins)
-description: An introduction to what we know of Hytale's Java-based modding system as of writing this article.
+title: Modding Java (Plugin del Server)
+description: Un'introduzione a ciò che sappiamo del modding in Hytale basato su Java al momento di scrivere questo articolo.
 ---
 
-Hytale's modding capabilities include a Java-based modding system that allows modders
-to create custom behaviors, interactions, and game mechanics. While the full details of
-this system are not publicly documented as the game is still in development and not
-released, we can summarize what is currently known about it.
+Le funzionalità di modding di Hytale includono un sistema di modding basato su Java che consente ai modder di creare comportamenti, interazioni e meccaniche di gioco personalizzati. Sebbene i dettagli completi di questo sistema non siano stati resi pubblici, poiché il gioco è ancora in fase di sviluppo e non è stato ancora rilasciato, possiamo riassumere ciò che attualmente si sa al riguardo.
 
-### Important Details of Modding in Hytale
+### Dettagli importanti del Modding in Hytale
 
-Hytale's modding goes on server side and not client side, meaning that mods/plugins are
-hosted on the server and players connect to these modded servers to experience the custom content
-without needing to install anything on their end. This approach ensures a consistent experience
-for all players on a modded server.
+Il modding di Hytale avviene lato server e non lato client, il che significa che le mod/i plugin sono ospitati sul server e i giocatori si connettono a questi server modificati per sperimentare i contenuti personalizzati senza bisogno di installare nulla sul proprio dispositivo. Questo approccio garantisce un'esperienza coerente
+per tutti i giocatori su un server moddato.
 
-### Overview of Java-Based Modding
+### Panoramica del Modding basato su Java
 
-The server-side modding system in Hytale is based on Java, making the server plugins JAR files.
+Il sistema di modding lato server in Hytale si basa sul linguaggio Java, rendendo i plugin del server file JAR.
 
-We're guessing this is done so that Minecraft modders can easily transition to Hytale modding,
-as Minecraft modding is also primarily Java-based. This allows modders familiar with Java
-to leverage their existing knowledge when creating mods for Hytale.
+Immaginiamo che questo sia fatto in modo tale che i modder di Minecraft possano passare facilmente al modding in Hytale,
+dato che il modding di Minecraft è anch'esso principalmente basato su Java. Questo consente ai modder che hanno familiarità con Java
+di sfruttare le loro conoscenze esistenti per creare mod per Hytale.
 
-#### Singleplayer Concerns
+#### Preoccupazioni in Giocatore Singolo
 
-Despite the name, server plugins can also be used in singleplayer mode.
+Nonostante il nome, i plugin del server possono essere utilizzati anche in modalità giocatore singolo.
 Hytale's singleplayer mode runs a local server instance, allowing players to use server plugins
 even when playing alone. This means that mods created as server plugins can enhance the singleplayer experience as well.
 
-### Mixin System
+### Sistema Mixin
 
 Mixins were used in Minecraft modding to directly modify the game’s code, even able to overwrite
 or redirect logic and values. An extremely powerful but somewhat brittle system which depends
@@ -38,7 +33,7 @@ on the source code/game version staying pretty much the same.
 We have no official information on Mixins in Hytale. Despite that, we have reason to believe they will not
 need to be supported for the following reasons:
 
-1. For a properly designed game, 95% of Mixin use cases can be solved with a good API instead.
+1. Per un gioco correttamente progettato, il 95% dei casi di utilizzo di Mixin possono essere risolti con una buona API.
    In fact, many Minecraft modding APIs simply mixin to provide the API so the developers using
    those APIs don’t have to write the mixin themselves.
    * This is typically replacing hardcoded values and overwriting hardcoded behaviors.

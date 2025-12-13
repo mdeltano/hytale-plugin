@@ -1,13 +1,17 @@
 {
   "displayName": "العربية",
-
   "nav": {
     "title": "صناعة مودات هايتيل",
-    "documentation": "دليل التوثيق"
+    "documentation": "دليل التوثيق",
+    "search": "Search"
   },
   "home": {
     "title": "المرجع الأول لكيفية صناعة مودات هايتيل {flipwords}",
-    "flipwords": ["الشروحات", "دليل التوثيق", "الموارد"],
+    "flipwords": [
+      "الشروحات",
+      "دليل التوثيق",
+      "الموارد"
+    ],
     "description": "أهم مورد مجتمعي لتعديل لعبة هايتيل، يقدّم أدلّة شاملة، ووثائق تفصيلية، وأدوات أساسية لمساعدتك على بدء رحلتك في عالم صناعة المودز.",
     "documentation": "الوثائق",
     "discord": "انضم إلى مجتمعنا!",
@@ -16,5 +20,38 @@
   "misc": {
     "loading": "جارٍ التحميل…",
     "gitInfoUnavailable": "معلومات Git غير متوفرة"
+  },
+  "meta": {
+    "established_information": {
+      "title": "Established Information",
+      "separator": "Specific Categories",
+      "server": {
+        "title": "Server",
+        "content_categories": {
+          "title": "Content Categories"
+        },
+        "interface": {
+          "title": "Interface"
+        }
+      },
+      "client": {
+        "title": "Client"
+      },
+      "gameplay": {
+        "title": "Gameplay"
+      },
+      "misc": {
+        "title": "Miscellaneous"
+      }
+    },
+    "guides": {
+      "title": "Guides",
+      "java_basics": {
+        "title": "Java Basics"
+      }
+    },
+    "community_projects": {
+      "title": "Community Projects"
+    }
   }
 }

@@ -38,43 +38,43 @@ Essa arquitetura significa:
   </span>
 </Callout>
 
-### UI Layout Assets
+### Recursos de Layout de UI
 
-Hytale's UI customization system works through the following structure:
+O sistema de customização de UI do Hytale funciona através da seguinte estrutura:
 
-* **UI Layout**: Sent to the client as an asset
-* **UI Behavior**: Defined in Java code
-* **Custom Layouts**: Enables creation of bespoke UI layouts rather than repurposing existing ones (unlike inventory menu modifications in Minecraft)
+* **Layout da UI**: Enviado ao cliente como um recurso
+* **Comportamento da UI**: definido no código Java
+* **Layouts personalizados**: Permite a criação de layouts de UI sob medida ao invés de reaproveitar os existentes (como modificações no menu do Minecraft)
 
-### UI Framework Implementations
+### Implementações do Framework de UI
 
-Hytale currently supports multiple UI implementations, with plans to consolidate on NoesisGUI:
+Hytale atualmente suporta várias implementações da UI, com planos para consolidar no NoesisGUI:
 
-#### Legacy Implementation
+#### Implementação Legado
 
-* Serves as an example of server modding capabilities
-* Uses a combination of in-game elements, UI Markup Assets, and Java mod code
-* Utilizes a legacy custom markup language
-* Will be deprecated in favor of NoesisGUI
+* Serve como um exemplo das capacidades da modificação do servidor
+* Utiliza uma combinação de elementos do jogo, recursos de marcação de interface e código de mod em Java.
+* Utiliza uma linguagem de marcação personalizada legacy
+* Será descontinuado a favor do NoesisGUI
 
-#### NoesisGUI (Primary Framework)
+#### NoesisGUI (Framework primária)
 
-* Uses XAML Markup Language for UI definition
-* Supports multiple languages for internationalization
-* Runs on C# bindings on the client side (not C++)
-* Represents the future direction of Hytale's UI system
+* Usa Linguagem de Marcação XAML para a definição da UI
+* Suporta várias línguas para internacionalização
+* Roda no C# bindings no lado do client (não C++)
+* Representa a direção futura do sistema da UI do Hypixel
 
-#### Third Framework
+#### Terceiro Framework
 
-* Currently being phased out
-* Will be replaced by NoesisGUI as part of the consolidation effort
+* Atualmente em fase de descontinuação.
+* Será substituído por NoesisGUI como parte do esforço de consolidação
 
-### Performance Considerations
+### Considerações de desempenho
 
-Due to the server-side nature of UI processing, there are inherent performance characteristics to consider:
+Devido à natureza do processamento server-side da UI, existem características de desempenho inerentes a considerar:
 
-* **Latency Impact**: Button clicks and UI interactions must travel to the server before taking effect, meaning network ping directly affects UI responsiveness
-* **No Client Persistence**: Since client-side modding is not supported, no modded values persist on the client
-* **Optimized Architecture**: Hytale's system is designed to minimize latency through efficient communication protocols and optimized server performance, ensuring smooth interactions despite server-side processing requirements
+* **Impacto de Latência**: Cliques dos botões e interações com a interface do usuário devem viajar para o servidor antes de ter efeito, o que significa que o ping da rede afeta diretamente a capacidade de resposta da UI
+* **Sem Persistência de Cliente**: Sendo que os mods client-side não é suportado, nenhum valor modificado persiste no client
+* **Arquitetura Otimizada**: O sistema de Hytale foi projetado para minimizar a latência através de protocolos de comunicação eficientes e otimizar a performance do servidor, garantindo interações suaves apesar dos requisitos de processamento do lado do servidor
 
-The architecture prioritizes security and consistency by centralizing UI logic on the server while maintaining responsive user experiences
+A arquitetura prioriza a segurança e consistência ao centralizar a lógica UI no servidor mantendo experiências responsivas do usuário

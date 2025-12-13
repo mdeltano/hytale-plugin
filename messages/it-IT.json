@@ -1,20 +1,57 @@
 {
   "displayName": "Italiano",
-
   "nav": {
     "title": "Hytale Modding",
-    "documentation": "Documentation"
+    "documentation": "Documentazione",
+    "search": "Cerca"
   },
   "home": {
-    "title": "#1 Resource for Hytale Modding {flipwords}",
-    "flipwords": ["Guides", "Documentation", "Resources"],
-    "description": "The number one community resource for modding Hytale, featuring comprehensive guides, detailed documentation, and essential tools to kickstart your modding journey.",
+    "title": "#1 Risorsa per il Modding in Hytale {flipwords}",
+    "flipwords": [
+      "Guide",
+      "Documentazione",
+      "Risorse"
+    ],
+    "description": "La risorsa numero uno della community per il modding di Hytale, con guide complete, documentazione dettagliata e strumenti essenziali per iniziare il tuo viaggio nel mondo del modding.",
     "documentation": "Docs",
-    "discord": "Join the community!",
-    "memberCount": "{count} Members"
+    "discord": "Unisciti alla community!",
+    "memberCount": "{count} Membri"
   },
   "misc": {
-    "loading": "Loading...",
-    "gitInfoUnavailable": "Git info not available"
+    "loading": "Caricamento...",
+    "gitInfoUnavailable": "Informazioni di Git non disponibili"
+  },
+  "meta": {
+    "established_information": {
+      "title": "Informazioni consolidate",
+      "separator": "Categorie Specifiche",
+      "server": {
+        "title": "Server",
+        "content_categories": {
+          "title": "Categorie dei contenuti"
+        },
+        "interface": {
+          "title": "Interfaccia"
+        }
+      },
+      "client": {
+        "title": "Client"
+      },
+      "gameplay": {
+        "title": "Gameplay"
+      },
+      "misc": {
+        "title": "Informazioni Varie"
+      }
+    },
+    "guides": {
+      "title": "Guide",
+      "java_basics": {
+        "title": "Fondamenti Di Java"
+      }
+    },
+    "community_projects": {
+      "title": "Progetti della comunità"
+    }
   }
 }

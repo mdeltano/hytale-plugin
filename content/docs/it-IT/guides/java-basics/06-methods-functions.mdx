@@ -226,9 +226,9 @@ public static void main(String[] args) {
 }
 ```
 
-## Method Overloading
+## Overloading dei Metodi
 
-You can have multiple methods with the same name but different parameters:
+È possibile avere più metodi con lo stesso nome ma diversi parametri:
 
 ```java
 public static void displayMessage(String message) {
@@ -242,52 +242,52 @@ public static void displayMessage(String message, int times) {
 }
 
 public static void main(String[] args) {
-    displayMessage("Hello");           // Calls first version
-    displayMessage("Hello", 3);        // Calls second version
+    displayMessage("Ciao");           // Chiama la prima versione
+    displayMessage("Ciao", 3);        //  Chiama la seconda versione
 }
 ```
 
-<Callout type="info" title="Method Overloading Rules">
-  Methods are considered different if they have:
+<Callout type="info" title="Regole per l'Overloading dei Metodi">
+  I metodi sono considerati diversi se hanno:
 
-  * Different number of parameters
-  * Different types of parameters
-  * Different order of parameters
+  * Un diverso numero di parametri
+  * Un diverso tipo di parametri
+  * Un diverso ordine di parametri
 
   ```java
   public static void test(int a) { }
-  public static void test(int a, int b) { }        // Different count
-  public static void test(double a) { }            // Different type
-  public static void test(String a, int b) { }     // Different types
-  public static void test(int a, String b) { }     // Different order
+  public static void test(int a, int b) { }        // Diverso numero di parametri
+  public static void test(double a) { }            // Tipo diverso
+  public static void test(String a, int b) { }     // Tipi diversi
+  public static void test(int a, String b) { }     // Ordine diverso
 
-  // Wrong - Only return type is different
+  // Errato - Solo il tipo restituito e' diverso
   public static int test(int a) { }
   ```
 </Callout>
 
-## Common Patterns in Hytale Modding
+## Pattern tipici nel Modding in Hytale
 
-### Item Creation
+### Creazione di Item
 
 ```java
-public static Item createItem(String name, int durability) {
+public static Item creaItem(String nome, int durabilita) {
     Item item = new Item();
-    item.setName(name);
-    item.setDurability(durability);
+    item.setName(nome);
+    item.setDurability(durabilita);
     return item;
 }
 
-public static Item createSword() {
-    return createItem("Sword", 100);
+public static Item creaSpada() {
+    return creaItem("Spada", 100);
 }
 
-public static Item createPickaxe() {
-    return createItem("Pickaxe", 150);
+public static Item creaPiccone() {
+    return creaItem("Piccone", 150);
 }
 ```
 
-### Block Placement Validation
+### Convalida del posizionamento dei blocchi
 
 ```java
 public static boolean canPlaceBlock(int x, int y, int z) {
@@ -307,14 +307,14 @@ public static boolean canPlaceBlock(int x, int y, int z) {
 public static void placeBlock(int x, int y, int z, String type) {
     if (canPlaceBlock(x, y, z)) {
         // Place the block
-        System.out.println("Placed " + type + " at (" + x + ", " + y + ", " + z + ")");
+        System.out.println("Posizionato  " + type + " a (" + x + ", " + y + ", " + z + ")");
     } else {
-        System.out.println("Cannot place block there!");
+        System.out.println("Impossibile posizionare il blocco!");
     }
 }
 ```
 
-### Player State Checks
+### Controlli Stato del Giocatore
 
 ```java
 public static boolean isLowHealth(int health, int maxHealth) {
@@ -325,21 +325,21 @@ public static String getHealthStatus(int health, int maxHealth) {
     double percentage = (health * 100.0) / maxHealth;
     
     if (percentage >= 75) {
-        return "Healthy";
+        return "In Salute";
     } else if (percentage >= 50) {
-        return "Injured";
+        return "Ferito";
     } else if (percentage >= 25) {
-        return "Critical";
+        return "Critico";
     } else {
-        return "Near Death";
+        return "In punto di morte";
     }
 }
 ```
 
-## Best Practices
+## Buone pratiche
 
-<Callout type="info" title="Method Naming">
-  Use descriptive verb-based names that explain what the method does:
+<Callout type="info" title="Nomenclatura dei metodi">
+  Usa nomi descrittivi basati su verbi che spieghino cosa fa il metodo:
 
   ```java
   // Good
@@ -349,64 +349,64 @@ public static String getHealthStatus(int health, int maxHealth) {
   public static void displayInventory() { }
 
   // Bad
-  public static void dmg() { }        // Too short
-  public static void method1() { }    // Not descriptive
-  public static void stuff() { }      // Too vague
+  public static void dmg() { }        // Troppo corto
+  public static void method1() { }    // Non descrittivo
+  public static void stuff() { }      // Troppo vago
   ```
 </Callout>
 
-## Practice Exercises
+## Esercizi Pratici
 
-1. **Temperature Converter**: Write methods to convert:
-   * Celsius to Fahrenheit: `(C × 9/5) + 32`
-   * Fahrenheit to Celsius: `(F - 32) × 5/9`
+1. **Convertitore di temperatura**: Scrivi dei metodi per convertire:
+   * Celsius in Fahrenheit: `(C × 9/5) + 32`
+   * Fahrenheit in Celsius: `(F - 32) × 5/9`
 
-2. **Circle Calculator**: Create methods that calculate:
-   * Area: `π × radius²`
-   * Circumference: `2 × π × radius`
-   * Use `Math.PI` for π
+2. **Calcolatore di cerchi**: Scrivi dei metodi per convertire:
+   * Area: `π × raggio²`
+   * Circonferenza: `2 × π × raggio`
+   * Usa `Math.PI` per π
 
-3. **Item Durability**: Write these methods:
-   * `damageItem(int current, int damage)` - returns new durability
-   * `isBroken(int durability)` - returns true if durability is less than or equal to 0
-   * `repairItem(int current, int max)` - returns max durability
+3. **Durabilità di un item**: Scrivi questi metodi:
+   * `damageItem(int current, int damage)` - restituisce la nuova durata
+   * `isBroken(int durability)` - restituisce vero se la durata è minore o uguale a 0
+   * `repairItem(int current, int max)` - restituisce la durata massima
 
-4. **Password Validator**: Create a method that checks if a password is valid:
-   * At least 8 characters long
-   * Contains at least one number
-   * Returns true if valid, false otherwise
+4. **Convalidatore password**: crea un metodo che verifica se una password è valida:
+   * Almeno 8 caratteri di lunghezza
+   * Contiene almeno un numero
+   * Restituisce vero se valido, falso altrimenti
 
-## Common Mistakes
+## Errori Comuni
 
 ```java
-// Wrong - Forgetting return statement
+// Sbagliato - Dimenticato l'istruzione return
 public static int getValue() {
     int x = 10;
-    // Forgot to return!
+    // Dimenticato di restituire
 } !
 
-// Correct
+// Corretto
 public static int getValue() {
     int x = 10;
     return x;
 }
 
-// Wrong - Wrong return type
+// Sbagliato  - tipo restituito errato
 public static int getText() {
-    return "Hello";  // Error! Should return int, not String
+    return "Ciao";  // Errore! Deve restituire int, non String
 }
 
-// Correct
+// Corretto
 public static String getText() {
-    return "Hello";
+    return "Ciao";
 }
 
-// Wrong - Not calling the method
+// Sbagliato - Non chiamare il metodo
 public static void main(String[] args) {
-    greet;  // Error! Missing ()
+    greet;  // Errore! () mancanti
 }
 
-// Correct
+// Corretto
 public static void main(String[] args) {
     greet();
 }

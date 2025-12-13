@@ -20,10 +20,10 @@ public class Main {
         player.health = 100;
         player.maxHealth = 100;
         
-        // Oops! Someone can break the rules
-        player.health = 500;      // Health over maximum!
-        player.health = -50;      // Negative health!
-        player.name = "";         // Empty name!
+        // Ой! Кто-то может нарушить правила
+        player.health = 500;      // Здоровье выше максимума!
+        player.health = -50;      // Отрицательное здоровье!
+        player.name = "";         // Пустое имя!
     }
 }
 ```
@@ -44,7 +44,7 @@ public class Main {
 **Теперь внимательно:**
 
 * `public` - Любой может получить доступ
-* `private` - только этот класс может получить доступ
+* `private` - Доступно только внутри этого класса
 
 ## Создание приватных свойств
 
@@ -65,8 +65,8 @@ public class Player {
 Теперь вы не можете получить доступ к свойствам напрямую:
 
 ```java
-Игрок = new Player("Alice", 100);
-player.health = 500; // ❌ Error!
+Player player = new Player("Alice", 100);
+player.health = 500;  // ❌ Ошибка! health является private
 ```
 
 ## Геттеры и Сеттеры
@@ -156,11 +156,11 @@ public class Item {
     
     public void setDurability(int durability) {
         if (durability < 0) {
-            this. urability = 0;
+            this.durability = 0;
         } else if (durability > maxDurability) {
-            это. urability = максимальная прочность;
+            this.durability = maxDurability;
         } else {
-            this. urability = долговечность;
+            this.durability = durability;
         }
     }
     
@@ -176,7 +176,7 @@ public class Item {
 
 ```java
 public class Monster {
-    private String id;  // Should never change
+    private String id;  // Не должен меняться
     private int health;
     
     public Monster(String id, int health) {
@@ -184,7 +184,7 @@ public class Monster {
         this.health = health;
     }
     
-    // Getter only - no setter!
+    // Только геттер - не сеттер!
     public String getId() {
         return id;
     }
@@ -449,21 +449,21 @@ public class Player {
 }
 ```
 
-## Практические Задания
+## Практические задания
 
 1. \*\*Создайте класс `BankAccount` \*\*:
    * Private свойства: accountNumber, balance
    * Конструктор для задания номера счета
    * Методы: deposit(), withdraw(), getBalance()
-   * Проверка: нельзя снять больше, чем баланс
+   * Валидация: нельзя снять больше, чем баланс
    * Номер счета должен быть доступен только для чтения
 
-2. \*\*Создайте класс `Door`, \*\*:
-   * Приватные свойства: isLocked, keyCode
+2. **Создайте класс `Door`**
+   * Private свойства: isLocked, keyCode
    * Конструктор для установки кода - ключа
    * Методы: lock(), unlock(String code), isLocked()
    * unlock() работает только с правильным кодом
-   * Код должен быть приватным (не используйте его!)
+   * Код должен быть private (не открывайте его!)
 
 3. **Создайте класс `PlayerStats`**:
    * Private свойства: strength, defense, speed
@@ -473,6 +473,6 @@ public class Player {
    * Статистика не может быть отрицательной или больше 100
 
 4. **Рефакторинг класса**: возьмите один из ваших классов с предыдущего урока и добавьте правильную инкапсуляцию:
-   * Сделать все свойства приватными
+   * Сделайте все свойства private
    * Добавьте соответствующие геттеры и сеттеры
-   * Добавьте проверку там, где это необходимо
+   * Добавьте валидацию там, где это необходимо

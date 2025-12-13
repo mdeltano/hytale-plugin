@@ -1,14 +1,18 @@
 {
   "displayName": "Русский",
-
   "nav": {
     "title": "Hytale Modding",
-    "documentation": "Документация"
+    "documentation": "Документация",
+    "search": "Search"
   },
   "home": {
     "title": "#1 Ресурс для Моддинга Hytale",
-    "flipwords": ["Гиды", "Документация", "Ресурсы"],
-    "description": "Лучший общественный ресурс для моддинга Hytale, включая полноценные инструкции, подробная документация, и самые необходимые инструменты, чтобы начать свой путь в моддинге.",
+    "flipwords": [
+      "Гиды",
+      "Документация",
+      "Ресурсы"
+    ],
+    "description": "Лучший ресурс для моддинг комьюнити Hytale, включающий в себя\nподробные гайды, документацию и все необходимые инструменты, чтобы начать свое путешествие в мир моддинга.",
     "documentation": "Документация",
     "discord": "Присоединись нашей коммьюнити!",
     "memberCount": "{count} Участников"
@@ -16,5 +20,38 @@
   "misc": {
     "loading": "Загрузка...",
     "gitInfoUnavailable": "Git недоступен"
+  },
+  "meta": {
+    "established_information": {
+      "title": "Established Information",
+      "separator": "Specific Categories",
+      "server": {
+        "title": "Server",
+        "content_categories": {
+          "title": "Content Categories"
+        },
+        "interface": {
+          "title": "Interface"
+        }
+      },
+      "client": {
+        "title": "Client"
+      },
+      "gameplay": {
+        "title": "Gameplay"
+      },
+      "misc": {
+        "title": "Miscellaneous"
+      }
+    },
+    "guides": {
+      "title": "Guides",
+      "java_basics": {
+        "title": "Java Basics"
+      }
+    },
+    "community_projects": {
+      "title": "Community Projects"
+    }
   }
 }

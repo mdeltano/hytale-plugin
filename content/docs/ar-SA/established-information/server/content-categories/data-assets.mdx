@@ -11,51 +11,51 @@ description: نظرة عامة على أصول البيانات في هايتي�
 
 تمكّنك أصول البيانات (Data Assets) من إنشاء أو تعديل مكوّنات اللعبة الأساسية باستخدام ملفات JSON.
 
-* **Blocks**: Define new block types and their properties
-* **Items**: Create custom items with unique behaviors
-* **NPCs**: Configure non-player characters and their AI
-* **World generation**: Control how the world is generated
-* **Loot tables**: Define what items drop from various sources
+* **الكتل (البلوكات)**: إنشاء أنواع كتل (بلوكات) جديدة وتعيين خصائصها
+* **العناصر (الايتمز)**: صنع عناصر مخصصة بخصائص وسلوكيات فريدة
+* **الشخصيات غير القابلة للعب (شخصيات الكومبيوتر)**: ضبط الشخصيات وذكاءها الاصطناعي
+* **توليد العالم**: التحكم بكيفية إنشاء العالم
+* **جداول اللوت (Loot Tables)**: تحديد ما تُسقطه المصادر المختلفة من عناصر (ايتمز)
 
-## Comparison to Minecraft
+## المقارنة مع ماينكرافت
 
-Data Assets are analogous to Minecraft's data pack JSON files, but with significantly broader scope. While Minecraft's data packs are somewhat limited, Hytale's data-driven architecture means that core game elements like blocks, items, and NPCs can all be modified through JSON files.
+توازي أصول البيانات (Data Assets) ملفات JSON لحزم بيانات (Datapacks) ماينكرافت، لكنها تمتد لتشمل قدرات أوسع بكثير. على عكس حزم بيانات (Datapacks) ماينكرافت المحدودة، تتيح بنية هايتيل المعتمدة على البيانات تعديل الكتل (البلوكات) والعناصر (الايتمز) والشخصيات غير القابلة للعب (شخصيات الكومبيوتر) باستخدام ملفات JSON.
 
-This expanded data-driven approach gives modders much more power to customize the game without needing to dive into complex programming.
+تتيح هذه البنية المعتمدة على البيانات للمعدّلين (المودرز) إمكانية تعديل اللعبة بسهولة أكبر دون التعامل مع أكواد برمجية معقدة.
 
-## Development Tools
+## أدوات التطوير
 
-Recognizing that JSON editing can be tedious and error-prone when done by hand, Hytale plans to provide multiple tools to make working with Data Assets more accessible:
+نظرًا لصعوبة تحرير JSON يدويًا واحتمالية وقوع الأخطاء، تهدف هايتيل لتقديم أدوات تساعد على العمل مع أصول البيانات (Data Assets) بشكل أسهل.
 
-### Node Editor
+### محرر العقد (Node Editor)
 
-Hytale is developing a "Node Editor" to make Data Asset management more user-friendly:
+تعمل هايتيل على تطوير "محرر العقد (Node Editor)" لجعل إدارة أصول البيانات (Data Assets) أكثر سهولة للمستخدمين.
 
-* **Visual interface**: Provides a graphical way to work with data relationships
-* **Customization focus**: Particularly helpful for customizing NPCs, interactions, and world generation
-* **Integrated workflow**: Works directly within the Hytale Asset Editor for a unified creator suite
-* **Accessibility**: Makes complex data relationships easier to understand and modify
+* **الواجهة المرئية**: توفر طريقة رسومية أو مرئية لإدارة علاقات البيانات
+* التركيز على التخصيص: مفيد بشكل خاص لتخصيص الشخصيات غير القابلة للعب (شخصيات الكومبيوتر) والتفاعلات وتوليد العالم
+* سير عمل متكامل: يعمل مباشرة داخل محرر أصول (Assest Editor) هايتيل لتوفير مجموعة أدوات موحدة للمبدعين
+* سهولة الاستخدام: تبسط فهم وتعديل العلاقات المعقدة بين البيانات
 
-### Additional Tools
+### أدوات إضافية
 
-Beyond the Node Editor, Hytale plans to support:
+بعيدًا عن محرر العقد(Node Editor)، تخطط هايتيل لدعم:
 
-* **Visual JSON generators**: Graphical interfaces for creating JSON without writing syntax
-* **Form-based editors**: Structured forms that generate the appropriate JSON automatically
-* **Multiple workflow options**: Different tools for different comfort levels and use cases
+* **مولدات JSON رسومية**: واجهات مرئية لإنشاء ملفات JSON دون الحاجة لكتابة أي شئ
+* **محررات قائمة على النماذج**: نماذج منظمة تقوم بإنشاء ملفات JSON المناسبة تلقائيًا
+* **خيارات سير عمل متعددة**: أدوات مختلفة لتناسب مستويات الراحة والاستخدام المتنوعة
 
-## Power and Simplicity
+## القوة والبساطة
 
-The effectiveness of Data Assets is demonstrated by their simplicity. For example, making raptors rideable in Hytale reportedly requires only 4 lines of JSON configuration - showcasing how powerful yet accessible the system is designed to be.
+تتجلى فعالية أصول البيانات (Data Assets) في بساطتها. على سبيل المثال، جعل ديناصورات الرابتورز (Raptors) قابلة للركوب في هايتيل يتطلب وفقًا للتقارير فقط 4 أسطر من إعدادات JSON مما يوضّح مدى قوة وسهولة استخدام النظام المصمم.
 
-This balance between power and accessibility is central to Hytale's modding philosophy: providing professional-grade tools that don't require programming expertise to use effectively.
+هذا التوازن بين القوة وسهولة الوصول يمثل جوهر فلسفة التعديل (المودنج) في هايتيل: تقديم أدوات بمستوى احترافي لا تتطلب خبرة برمجية لاستخدامها بفعالية.
 
-## Integration with Other Systems
+## الربط مع الأنظمة الأخرى
 
-Data Assets work seamlessly with Hytale's other development approaches:
+تعمل أصول البيانات (Data Assets) بسلاسة مع طرق التطوير الأخرى في هايتيل:
 
-* **Visual Scripting**: Can reference and manipulate data defined in Data Assets
-* **Java plugins**: Can read from and modify Data Assets for more complex behaviors
-* **Asset Editor**: Provides a unified interface for managing both visual assets and their data configurations
+* **البرمجة المرئية**: تتيح الوصول إلى البيانات  المعرفة في أصول البيانات(Data Assets) والتعديل عليها
+* **إضافات جافا**: تمكّن من قراءة وتعديل أصول البيانات (Data Assets) لتنفيذ سلوكيات أكثر تعقيدًا
+* **محرر الأصول (Asset Editor)**: يوفر واجهة موحدة لإدارة كل من الأصول المرئية (Visual Assets) وإعدادات بياناتها
 
-This integration ensures that Data Assets aren't isolated configuration files, but rather a core part of Hytale's comprehensive development environment.
+يضمن هذا التكامل أن أصول البيانات (Data Assets) ليست مجرد ملفات إعدادات معزولة، بل جزء أساسي من بيئة التطوير الشاملة في هايتيل.

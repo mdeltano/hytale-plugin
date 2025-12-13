@@ -1,77 +1,77 @@
 ---
-title: 01 - Variables & Data Types
-description: An introduction to variables and data types in Java programming.
+title: 01 - Mainīgie un Datu Tipi
+description: Ievads Java programmēšanas mainīgajos un datu tipos.
 ---
 
-Variables are containers that store data in your program. Think of them as labeled boxes where you can put different types of information.
+Mainīgie ir konteineri, kas glabā datus Jūsu programmā. Iedomājaties, ka tās ir apzīmētas kastes kur ievietot dažādu informāciju.
 
-## What is a Variable?
+## Kas ir Mainīgais?
 
-A variable has three key components:
+Mainīgajam ir trīs galvenie komponenti:
 
-1. **Type**: What kind of data it holds (e.g., integer, string, boolean)
-2. **Name**: The label you use to refer to the variable
-3. **Value**: The data it contains
+1. **Tips**: Kāda tipa datus tas tur (vesels skaitlis, virkne, pareiza, vai nepareiza īpašība)
+2. **Nosaukums**: Apzīmējums, ko izmantojat atsaucei
+3. **Vērtība**: Iekšā glabātie dati
 
-## Declaring/Creating Variables
+## Mainīgā Deklarēšana/Izveide
 
-In Java, you must declare a variable before using it, like you'd need a box before putting something in it. The syntax is:
+Pirms mainīgā lietošanas tas ir jādeklarē. Piemēram kaste ir jāizveido pirms tajā var kaut ko ielikt. Sintakse ir šāda:
 
 ```java
-int age;
-age = 18;
+int vecums;
+vecums = 18;
 
-int age = 18; // Declaration and assignment in one line
+int vecums = 18; // Deklarēšana un vērtības piešķiršana vienā līnijā
 ```
 
-## Primitive Data Types
+## Datu Tipu Primitīvi:
 
-You might wonder what "int" means. It's a primitive data type in Java. Java has 8 primitive data types. Here are the most important ones for modding:
+Jums varētu rasties jautājums, kas ir "int". Tas ir Primitīvs Datu Tips iekš Java. Javā ir 8 primitīvi datu tipi. Šeit ir paši svarīgākie:
 
-| Data Type | Description                   | Example                    |
+| Datu Tips | Apraksts                      | Piemērs                    |
 | --------- | ----------------------------- | -------------------------- |
-| int       | Integer (whole numbers)       | `int score = 100;`         |
-| double    | Decimal numbers               | `double pi = 3.14;`        |
-| boolean   | True or false values          | `boolean isActive = true;` |
-| char      | Single character              | `char grade = 'A';`        |
-| String    | Sequence of characters (text) | `String name = "Hytale";`  |
+| int       | Skaitlis (Vesels skaitlis)    | `int rezultats = 100;`     |
+| double    | Decimālskaitlis               | `double pi = 3.14;`        |
+| boolean   | Patiesa vai Nepatiesa vērtība | `boolean irAktivs = true;` |
+| char      | Viens burts                   | `char atzime = 'A';`       |
+| String    | Vārdu salikums (teksts)       | `String vards = "Hytale";` |
 
-## Type Conversion
+## Tipa Pārveidošana
 
-Sometimes you might not want a variable to stay the same type. You can convert between types:
+Dažkārt tev varētu rasties vēlme pārveidot mainīgā tipu. Iespējamie veidi kā mainīt tipus:
 
-### Automatic
-
-```java
-int num = 10;
-double decimalNum = (double) num; // 10.0 - works automatically
-```
-
-### Manual (Casting)
+### Automātisks
 
 ```java
-double decimalNum = 9.78;
-int num = (int) decimalNum; // 9 - decimals are dropped
+int sk = 10;
+double decimalSk = (double) sk; // 10.0 - strādā automātiski
 ```
 
-## Constants
+### Manuāli (Apgriežot)
 
-If you want a variable that shouldn't change, use the `final` keyword:
+```java
+double decimalSk = 9.78;
+int sk = (int) decimalSk; // 9 - decimālskaitļi tiek nogriezti
+```
+
+## Konstanti
+
+Ja vēlaties mainīgo, kas nedrīkst mainīties, izmantojiet atslēgvārdu 'final':
 
 ```java
 final double PI = 3.14159;
 ```
 
-**Convention**: Constants use ALL_CAPS_WITH_UNDERSCORES.
+**Konvencija**: Konstanti rakstās LIELIEM_BURTIEM_UN_APAKŠSTRĪPĀM
 
-## Practice
+## Prakse
 
-It's best to practice what you just learnt - don't look above now and try to do this yourself. If you get stuck, look back up!
+Vislabāk ir praktizēt to, ko tikko iemācījies - neskatoties tagad augšā, mēģini izpildīt soļus pats. Paskaties augstāk tikai, kad iesprūsti!
 
-1. Declare an integer variable named `lives` and set it to 3.
-2. Declare a double variable named `gravity` and set it to 9.81.
-3. Declare a boolean variable named `isGameOver` and set it to false.
-4. Convert the `lives` variable to a double and store it in a new variable named `livesAsDouble`.
-5. Declare a constant named `MAX_LEVEL` and set it to 100.
+1. Deklarē integer mainīgo, nosauc to 'dzivibas' un piešķir tam vērtību 3.
+2. Deklarē double mainīgo, nosauc par 'gravitacija' un piešķir tam vērtību 9.81.
+3. Deklarē boolean mainīgo, nosauc par 'vaiSpeleBeigta' un piešķir vērtību false.
+4. Konvertē 'dzivibas' mainīgo uz double mainīgo un nosaki to glabāt iekš mainīgā 'dzivibasKaDecimalskaitli'
+5. Deklarē konstantu 'MAX_LIMENIS' un piešķir tam vērtību 100.
 
-Great! You've learned about variables and data types in Java. Now we're going to learn about operators and expressions in the next lesson.
+Lieliski! Būsi iemācījies Javas mainīgos un datu tipus. Nākamajā nodarbībā mēs uzzināsim par operatoriem un izteiksmēm.

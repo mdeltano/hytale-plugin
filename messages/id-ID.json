@@ -1,13 +1,17 @@
 {
   "displayName": "Indonesia",
-
   "nav": {
     "title": "Hytale Modding",
-    "documentation": "Documentation"
+    "documentation": "Documentation",
+    "search": "Search"
   },
   "home": {
     "title": "Hytale Modding",
-    "flipwords": ["Guides", "Documentation", "Resources"],
+    "flipwords": [
+      "Guides",
+      "Documentation",
+      "Resources"
+    ],
     "description": "The number one community resource for modding Hytale, featuring comprehensive guides, detailed documentation, and essential tools to kickstart your modding journey.",
     "documentation": "Documentation",
     "discord": "Discord",
@@ -16,5 +20,38 @@
   "misc": {
     "loading": "Loading...",
     "gitInfoUnavailable": "Git info not available"
+  },
+  "meta": {
+    "established_information": {
+      "title": "Established Information",
+      "separator": "Specific Categories",
+      "server": {
+        "title": "Server",
+        "content_categories": {
+          "title": "Content Categories"
+        },
+        "interface": {
+          "title": "Interface"
+        }
+      },
+      "client": {
+        "title": "Client"
+      },
+      "gameplay": {
+        "title": "Gameplay"
+      },
+      "misc": {
+        "title": "Miscellaneous"
+      }
+    },
+    "guides": {
+      "title": "Guides",
+      "java_basics": {
+        "title": "Java Basics"
+      }
+    },
+    "community_projects": {
+      "title": "Community Projects"
+    }
   }
 }

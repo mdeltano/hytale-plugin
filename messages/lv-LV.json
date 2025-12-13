@@ -1,20 +1,57 @@
 {
   "displayName": "Latviski",
-
   "nav": {
-    "title": "Hytale Modding",
-    "documentation": "Documentation"
+    "title": "Hytale Modificēšana",
+    "documentation": "Dokumentācija",
+    "search": "Search"
   },
   "home": {
-    "title": "#1 Resource for Hytale Modding {flipwords}",
-    "flipwords": ["Guides", "Documentation", "Resources"],
-    "description": "The number one community resource for modding Hytale, featuring comprehensive guides, detailed documentation, and essential tools to kickstart your modding journey.",
-    "documentation": "Docs",
-    "discord": "Join the community!",
-    "memberCount": "{count} Members"
+    "title": "#1 Resurss Hytale Modificēšanā {flipwords}",
+    "flipwords": [
+      "Rokasgrāmatas",
+      "Dokumentācija",
+      "Resursi"
+    ],
+    "description": "Numur viens kopienas resurss Hytale modificēšanai, kurā atradīsi visaptverošas rokasgrāmatas, detalizētu dokumentāciju un būtiskus rīkus, lai sāktu savu modificēšanas ceļojumu.",
+    "documentation": "Doki",
+    "discord": "Pievienojies kopienai!",
+    "memberCount": "{count} Biedri"
   },
   "misc": {
-    "loading": "Loading...",
-    "gitInfoUnavailable": "Git info not available"
+    "loading": "Lādējas...",
+    "gitInfoUnavailable": "Git info nav pieejams"
+  },
+  "meta": {
+    "established_information": {
+      "title": "Established Information",
+      "separator": "Specific Categories",
+      "server": {
+        "title": "Server",
+        "content_categories": {
+          "title": "Content Categories"
+        },
+        "interface": {
+          "title": "Interface"
+        }
+      },
+      "client": {
+        "title": "Client"
+      },
+      "gameplay": {
+        "title": "Gameplay"
+      },
+      "misc": {
+        "title": "Miscellaneous"
+      }
+    },
+    "guides": {
+      "title": "Guides",
+      "java_basics": {
+        "title": "Java Basics"
+      }
+    },
+    "community_projects": {
+      "title": "Community Projects"
+    }
   }
 }
