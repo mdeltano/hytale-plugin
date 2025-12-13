@@ -25,6 +25,7 @@ import DragonFlyMount from "./(showcaseImages)/dragonfly_mount.gif";
 import Melodium from "./(showcaseImages)/Melodium.gif";
 import GaleWivern from "./(showcaseImages)/gale_wivern.gif";
 import WulfrumArmor from "./(showcaseImages)/Wulfrum_Armor.gif";
+import ElectricMotor from "./(showcaseImages)/HyEnergy_Electric_Motor.gif";
 import { DiscordButton } from "./discord-button";
 import { GitInfoButton } from "@/components/git-info-button";
 
@@ -40,6 +41,12 @@ export default function HomePage() {
   const messages = useMessages();
   const [isMobile, setIsMobile] = useState(false);
   const carouselItems: CarouselItem[] = [
+    {
+      title: "HyEnergy: Electric Motor",
+      author: "by seyager",
+      image: ElectricMotor,
+      link: "https://discord.gg/HytaleModding" // temporary link until a proper link is provided
+    },
     {
       title: "Dragonfly Mount",
       author: "by Nicolas | Tourne_Vis",
