@@ -45,7 +45,7 @@ const ShowcaseCard = ({ item }: { item: ShowcaseItem }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ExternalLinkIcon className="w-5 h-5" />
+              <ExternalLinkIcon className="w-7 h-7" />
             </Link>
           </Button>
         </div>
@@ -110,17 +110,21 @@ export default function HomePage() {
       <GitInfoButton />
       <Spotlight />
       <div className="container mx-auto flex flex-1 flex-col items-center px-12 py-8">
-        <div className="max-w-4xl space-y-8 text-center py-32">
-          <div className="space-y-6">
-            <h1 className="text-4xl font-semibold text-balance">
-              {messages.home.title.split("{flipwords}")[0]}
-              <FlipWords words={messages.home.flipwords} />
+        <div className="max-w-5xl space-y-8 text-center py-32">
+            <div className="space-y-6">
+            <h1 className="text-5xl font-semibold text-balance">
+              <div>{messages.home.title.split("{flipwords}")[0]}</div>
+              <div>
+                <FlipWords words={messages.home.flipwords} />
+              </div>
+              <div>
               {messages.home.title.split("{flipwords}")[1]}
+              </div>
             </h1>
-            <h2 className="text-muted-foreground text-lg text-balance">
+            <h2 className="text-muted-foreground text-xl text-balance">
               {messages.home.description}
             </h2>
-          </div>
+            </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
             <Button asChild>
@@ -145,7 +149,7 @@ export default function HomePage() {
       <div className="absolute left-0 right-0 bottom-32">
         <Marquee className="h-64 w-full">
           <MarqueeFade side="left" className="w-12" />
-          <MarqueeContent speed={40} pauseOnHover autoFill={false}>
+          <MarqueeContent speed={50} pauseOnHover autoFill={false}>
             {repeatedShowcaseItems.map((item, index) => (
               <MarqueeItem key={`${item.title}-${index}`} className="mx-2">
                 <ShowcaseCard item={item} />
