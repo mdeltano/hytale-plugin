@@ -24,6 +24,10 @@ export function baseOptions(
         url: `/${locale}/docs`,
         active: "nested-url",
       },
+      {
+        text: messages.nav.sponsors,
+        url: `/${locale}/sponsors`,
+      },
     ];
   }
 

@@ -19,6 +19,7 @@ import ElectricMotor from "./(showcaseImages)/HyEnergy_Electric_Motor.gif";
 import HyFableLogo from "./(showcaseImages)/HyFableLogo.jpg";
 import HyFableBanner from "./(showcaseImages)/HyFableBanner.jpg";
 import { DiscordButton } from "./discord-button";
+import { SponsorButton } from "./support-button";
 import { GitInfoButton } from "@/components/git-info-button";
 
 type ProjectType = 'art' | 'website' | 'server' | 'mod';
@@ -230,9 +231,24 @@ export default function HomePage() {
   return (
     <div className="relative flex flex-1 flex-col overflow-hidden">
       <GitInfoButton />
-      <Spotlight />
+      <Spotlight />      
+      {/* <div className="absolute top-4 right-4 z-10 max-w-xs">
+        <p className="text-right text-xs text-muted-foreground mb-2">
+          Proudly sponsored by
+        </p>
+        <div className="flex justify-end">
+          <Image
+            src="/branding/logo-light-348.png"
+            alt="Hytalies Sponsor Logo"
+            width={40}
+            height={20}
+            className="object-contain"
+          />
+        </div>
+      </div> */}
+      
       <div className="container mx-auto flex flex-col items-center px-4 md:px-12 py-8 flex-1 justify-center">
-        <div className="max-w-5xl space-y-8 text-center">
+        <div className="max-w-5xl space-y-8 text-center pt-16 md:pt-0">
             <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-semibold text-balance">
               <div>{messages.home.title.split("{flipwords}")[0]}</div>
@@ -264,11 +280,12 @@ export default function HomePage() {
               </Link>
             </Button>
             <DiscordButton />
+            <SponsorButton />
           </div>
         </div>
       </div>
       
-      <div className="w-full mt-auto mb-8 md:mb-16 pb-16 pt-16">
+      <div className="w-full mt-auto mb-8 md:mb-4 pb-16 pt-4">
         <Marquee className="h-64 w-full">
           <MarqueeFade side="left" className="w-12" />
           <MarqueeContent speed={50} pauseOnHover autoFill={false}>

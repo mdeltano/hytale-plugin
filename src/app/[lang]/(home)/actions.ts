@@ -28,3 +28,36 @@ export async function getDiscordStats() {
     throw error;
   }
 }
+
+export async function getSponsors() {
+  try {
+    const response = await fetch(
+      "https://opencollective.com/hytalemodding/members.json",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        next: { revalidate: 3600 },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const members = await response.json();
+
+    const activeBackers = members.filter(
+      (member: any) => member.role === "BACKER" && member.isActive === true
+    );
+
+    return activeBackers.map((member: any) => ({
+      ...member,
+      image: member.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=random`,
+    }));
+  } catch (error) {
+    console.error("Failed to fetch sponsors:", error);
+    throw error;
+  }
+}
