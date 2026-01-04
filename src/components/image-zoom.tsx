@@ -48,6 +48,8 @@ export function ImageZoom({
       }}
     >
       {children ?? (
+        // declared in mdx files, should be in props
+        // eslint-disable-next-line jsx-a11y/alt-text
         <Image
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 900px"
           {...props}
