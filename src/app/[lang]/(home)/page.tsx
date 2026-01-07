@@ -31,6 +31,7 @@ import HylandiaBanner from "./(showcaseImages)/Hylandia_Banner.png";
 import HylandiaLogo from "./(showcaseImages)/Hylandia_Logo.png";
 import MagicCircleGust from "./(showcaseImages)/MagicCircleGust.gif";
 import Shroomie from "./(showcaseImages)/Shroomie.gif";
+import Froggy from "./(showcaseImages)/Froggy.gif"
 import { DiscordButton } from "./discord-button";
 import { SponsorButton } from "./support-button";
 import { GitInfoButton } from "@/components/git-info-button";
@@ -254,6 +255,13 @@ export default function HomePage() {
       title: "Shroomie",
       author: "by Miyako Hikari",
       image: Shroomie,
+      link: "",
+      type: "art",
+    },
+    {
+      title: "Froggy",
+      author: "by Unknown Knight",
+      image: Froggy,
       link: "",
       type: "art",
     },
