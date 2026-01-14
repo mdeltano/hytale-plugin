@@ -1,3 +1,6 @@
 {
-  "icon": "IdCardLanyard"
+  "icon": "IdCardLanyard",
+  "pages": [
+    "hytale-ecs.mdx"
+  ]
 }
